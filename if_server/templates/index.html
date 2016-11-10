@@ -1,0 +1,40 @@
+$def with (data)
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	table, th, td {
+		boarder: 1px solid black;
+		boarder-collapse: collapse;
+	}
+	th {
+		text-align: left;
+	}
+	th, td {
+		padding: 15px;
+	}
+	</style>
+	</head>
+<body>
+	<h1>IP Address Log</h1>
+	<p> Data listed chronologically</p>
+<table style="width:100%">
+		<tr>
+			<td>Host</td>
+			<td>Date</td>
+			<td>Iface#</td>
+			<td>IPv4</td>
+			<td>Subnet</td>
+			<td>Gateway</td>
+		</tr>
+	$for data in data:
+		<tr>
+			<td>$data.host</td>
+			<td>$data.temp</td>
+			<td>$data.iface</td>
+			<td>$data.ipv4</td>
+			<td>$data.mask</td>
+			<td>$data.gate</td>
+		</tr>
+</table>
+</body>
