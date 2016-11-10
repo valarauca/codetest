@@ -12,7 +12,7 @@ To run:
       $ git clone https://github.com/valarauca/codetest
       $ cd codetest/if_server/
       $ pip install web.py
-      $ nohup python app.py 80 
+      $ python2.7 app.py [PORT] 
 
 That will create a locally hosted app. The app is required to be running
 for the client to function. 
@@ -26,11 +26,12 @@ To run this
      $ git clone https://github.com/valarauca/codetest
      $ pip install requests
      $ cd codetest/if_client
-     $ python2.7 if_client.py 'http://[where server is]/upload'
+     $ python2.7 if_client.py 'http://[where server is]:[Server Port]/upload'
 
- 
 The client supports both Windows and Linux. The operation is the same
 on both systems. Compability between OS's is handled internally.
+
+The server URL is a cli arg to allow for changes in backend provided they follow a general RESTful architecture.
 
 The nature of a simple CLI tool like this means it is fairly trivial to
 embedd within a scheduled task in windows
