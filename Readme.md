@@ -3,7 +3,9 @@ Interface Scrapper
 
 #Server:
 
-This is an extremely simple web.py server. It is currently hosted natively. In python. This is less then ideal, but prefectly functional provided there are not THOUSANDS of clients hitting it daily.
+This is an extremely simple web.py server. It is currently hosted natively. In python. This is less then ideal, but prefectly functional provided there are not THOUSANDS of clients hitting it daily. The server is currently in debug mode, with no error or 404 handling.
+
+The _backend_ if you could call it that is a Sqlite3 database. Very little data is stored per client upload, so sqlite is a fine choice for DB. It prevents additional ORM/connection depedencies.
 
 To run:
 
@@ -52,4 +54,9 @@ at bash script within `/etc/cron.daily`, `/etc/cron.weekly`, or
 Unit tests are listed in both `if_client/` and `if_server/` their file names start with `test_`. 
 
 There are no full integration tests.
+
+
+#DB Stuff:
+
+If you dig into the server directory there is a simple sqlite repl. 
 
